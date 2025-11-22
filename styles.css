@@ -1,0 +1,234 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3e7d9;
+    padding: 30px;
+}
+
+/* HEADER */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #4a3329;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #6b5b52;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+/* FOTO BESAR UTAMA */
+.big-photo {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.big-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BLOCK SETIAP BAGIAN */
+.block {
+    background: #fff8ef;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.15);
+}
+
+.block h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4d2f22;
+    margin-bottom: 18px;
+}
+
+/* FOTO BESAR DI SETIAP BAGIAN */
+.section-big-photo {
+    width: 100%;
+    height: 600px; /* ubah tinggi di sini */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+
+
+.section-big-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-caption {
+    text-align: center;
+    font-size: 15px;
+    color: #5a4b44;
+    margin-bottom: 25px;
+}
+
+/* GRID FOTO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+/* FOTO DALAM CARD */
+.photo {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BLOK VIDEO */
+.video-block {
+    background: #fff8ef;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.15);
+    border: 3px solid #d5b99a;
+    margin-top: 80px;        /* jarak lebih rapi dari konten atas */
+}
+
+/* JUDUL */
+.video-block h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #4d2f22;
+}
+
+/* VIDEO CONTAINER — RAPI & SIMETRIS */
+.video-container {
+    position: relative;
+    width: 100%;             /* full agar rapi */
+    max-width: 700px;        /* lebih besar dan proporsional */
+    margin: 0 auto;          /* tetap di tengah */
+    padding-top: 56.25%;     /* rasio 16:9 */
+
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* VIDEO RESPONSIVE */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================
+   RESPONSIVE (MOBILE)
+   ============================ */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px; /* biar tidak terlalu mepet di HP */
+    }
+
+    .container {
+        gap: 50px; /* jarak antar section lebih pas */
+    }
+
+    /* FOTO BESAR UTAMA & FOTO BESAR SETIAP BAGIAN */
+    .big-photo,
+    .section-big-photo {
+        max-height: 320px;  /* tidak terlalu tinggi */
+        height: 320px;
+    }
+
+    /* GRID di HP jadi 1 kolom biar rapi */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* CARD foto lebih kecil */
+    .photo {
+        height: 200px;
+    }
+
+    /* VIDEO BLOCK lebih presisi */
+    .video-block {
+        padding: 25px 15px;
+    }
+
+    /* VIDEO lebih kecil & pas tengah */
+    .video-container {
+        width: 100%;
+        max-width: 100%;   /* hilangkan batas 700px */
+        padding-top: 56.25%;
+        border-radius: 12px;
+    }
+
+    /* JUDUL VIDEO sedikit lebih kecil */
+    .video-block h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+}
+@media (max-width: 600px) {
+
+    /* Biarkan tinggi foto menyesuaikan proporsi asli */
+    .photo {
+        height: auto;
+    }
+
+    .photo img {
+        height: auto;
+        width: 100%;
+        object-fit: contain; /* gambar tampil utuh, tidak kepotong */
+    }
+}
+
+
+
+
+
